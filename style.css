@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+*:not(i) {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-image: url("https://media.giphy.com/media/k28n1OPefBEeQ/giphy.gif");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.d-none {
+  display: none;
+}
+
+.credits {
+  z-index: 1000;
+  position: absolute;
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+#closeCredits {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 30px;
+  color: red;
+}
+.credits span {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.techno {
+  display: flex;
+  align-items: center;
+}
+.credits i {
+  font-size: 50px;
+  color: blue;
+}
+
+.main {
+  width: 100%;
+  max-width: 800px;
+  padding: 10px 10px 70px 10px;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+#configIcon {
+  font-size: 50px;
+  color: #fff;
+  transition: transform 0.5s;
+  animation: rotateAnim 1s linear infinite;
+}
+
+.quote {
+  font-size: 1.5rem;
+  margin-top: -30px;
+  font-weight: 500;
+  color: #fff;
+}
+.quote::before {
+  content: attr(data-quote);
+  display: block;
+  height: 150px;
+  font-size: 10rem;
+  color: #1bcccc;
+}
+.main-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+p.author {
+  display: inline-block;
+  font-size: 1.3rem;
+  background-color: #1bcccc;
+  padding: 0.3em 5em 0.3em 0.3em;
+  margin: 0;
+  font-weight: 500;
+}
+
+#refresh {
+  display: inline-block;
+  font-size: 50px;
+  text-align: right;
+  color: #1bcccc;
+  font-size: 40px;
+}
+
+@keyframes rotateAnim {
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  p.author {
+    padding-right: 1em;
+  }
+}
